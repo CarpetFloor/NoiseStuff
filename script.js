@@ -1,6 +1,6 @@
-let octaves = 5;
+let octaves = 10;
 let variance = octaves * 10;
-let tileSize = 10;
+let tileSize = 7;
 let animation = false;
 
 let c = document.getElementById("canvas");
@@ -8,8 +8,6 @@ let r = c.getContext("2d");
 
 let w = window.innerWidth - 20;
 let h = window.innerHeight - 20;
-// w = 200;
-// h = 200;
 c.width = w;
 c.height = h;
 
@@ -97,14 +95,13 @@ window.setTimeout(function() {
     }
 
 }, 
-250);
+0);
 
 let i = 0;
 let currentOctave = 0;
 
 function smooth() {
     let neighbors = ["left", "right", "up", "down", "upleft", "upright", "downleft", "downright"];
-    // let neighbors = ["left", "right", "up", "down", "upleft", "upright"];
     
     // at top
     if(currentRow == 0) {
